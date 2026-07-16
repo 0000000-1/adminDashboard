@@ -8,5 +8,5 @@ const router = express.Router()
 router.get('/get', getTasks)
 router.post('/create', createTasks)
 
-//url https://localhost:2023/api/v1/users/get
+//url http://localhost:2023/api/v1/users/get
 export default router

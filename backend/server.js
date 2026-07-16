@@ -2,13 +2,15 @@ import express from 'express'
 import dotenv from "dotenv"
 import newDB from './config/db.js'
 import router from './routes/taskRoutes.js'
+import cors from 'cors'
 
 dotenv.config()
 
 const app = express()
 app.use(express.json())
-newDB()
 
+app.use(cors())
+newDB()
 // router declaration
 app.use('/api/v1/users', router)
 //url https://localhost:2023/api/v1/users

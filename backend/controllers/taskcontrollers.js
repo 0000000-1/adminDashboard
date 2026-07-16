@@ -7,7 +7,7 @@ export const getTasks = async (req,res) =>{
         }
         
         res.status(200).json({tasks:AllTasks})
-        console.log('working bitch')
+        // console.log('working bitch')
     } catch (error) {
        return res.status(500).json({error:error.message})
     }
@@ -18,7 +18,7 @@ try {
         const createdUser = await Task.create({
             title:title,
             priority:priority,
-            isCompleted:isCompleted || 'no'
+            isCompleted:isCompleted || 'false'
         })
         res.status(201).json(createdUser);
     //    return createdUser()
