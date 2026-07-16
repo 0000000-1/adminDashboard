@@ -9,7 +9,6 @@ const TaskForm = () => {
   const [title, setTitle] = useState("")
   const [priority, setPriority] = useState("low")
   const [isCompleted, setIsCompleted] = useState(false)
-  const [formData, setFormData] = useState()
 
   // const savedData = localStorage.getItem()
   const handleSubmit = async (e) => {

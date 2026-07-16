@@ -1,6 +1,7 @@
 import React from 'react'
-import  TaskCard  from '../components/TaskCard'
+import TaskCard from '../components/TaskCard'
 import { Link } from 'react-router'
+import SideBar from '../components/SideBar'
 
 const Dashboard = () => {
 
@@ -16,8 +17,13 @@ const Dashboard = () => {
           </Link>
         </div>
       </div>
-      <div className='h-full flex justify-center flex-1 flex-col items-center px-4 py-8 mb-12 '>
-        <TaskCard />
+      <div className='h-full grid grid-cols-5 gap-4 m-4'>
+        <div className='col-span-1'>
+          <SideBar />
+        </div>
+        <div className='col-span-4'>
+          <TaskCard />
+        </div>
       </div>
     </div>
   )
