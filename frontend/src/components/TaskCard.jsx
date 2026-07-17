@@ -37,6 +37,7 @@ const TaskCard = () => {
               <div className="flex gap-4">
                 <p>{task.priority}</p>
                 <p>{task.isCompleted ? '✅' : '❌'}</p>
+                <input type="checkbox" name="" id="" />
               </div>
             </div>
           ))}

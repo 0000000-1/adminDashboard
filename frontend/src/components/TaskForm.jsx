@@ -27,8 +27,8 @@ const TaskForm = () => {
   }
 
   return (
-    <div className=' flex justify-center items-center h-full w-full text-base font-medium pt-6'>
-      <form onSubmit={handleSubmit} className='relative flex w-fit h-auto bg-amber-200 flex-col p-6 mt-4  items-center rounded' >
+    <div className=' flex justify-center items-center h-screen w-full text-base font-medium '>
+      <form onSubmit={handleSubmit} className='relative flex w-fit h-auto bg-amber-200 flex-col p-6 items-center rounded' >
         <div className='absolute top-4 left-4'>
           <Link to={'/'} className='text-amber-600 hover:text-yellow-800 text-sm font-medium flex items-center gap-1'>
             ← Back
