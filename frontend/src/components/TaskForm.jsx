@@ -20,7 +20,7 @@ const TaskForm = () => {
       })
 
       alert('creating done')
-      // Navigate('/')
+      Navigate('/')
     } catch (error) {
       console.error(error)
     }
