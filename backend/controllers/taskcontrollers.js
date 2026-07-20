@@ -27,3 +27,35 @@ try {
         res.status(500).json({error:error.message})
     }
 }
+export const deleteTasks = async (req,res) =>{
+    try {
+        const {id} = req.params
+        const deletedTask = await Task.findByIdAndDelete(id)
+        if (!deletedTask) {
+            return res.status(200).json({message:"we can't find the task"})
+        }
+        
+        res.status(200).json({tasks:deletedTask})
+        // console.log('working bitch')
+    } catch (error) {
+       return res.status(500).json({error:error.message})
+    }
+}
+export const updateTasks = async (req,res) =>{
+try {
+    const {id} = req.params
+    const {title, priority, isCompleted} = req.body
+
+    const UpdatedUser = await Task.updateOne({
+        title, priority, isCompleted
+    })
+    
+    if(!UpdatedUser){
+       return res.status(200).json({message:"we can't update the task"})
+    }
+        res.status(201).json(UpdatedUser);
+        
+    } catch (error) {
+        res.status(500).json({error:error.message})
+    }
+}
