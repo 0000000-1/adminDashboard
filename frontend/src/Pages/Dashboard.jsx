@@ -6,8 +6,8 @@ import SideBar from '../components/SideBar'
 const Dashboard = () => {
 
   return (
-    <div className='h-screen w-full flex justify-center items-center flex-col'>
-      <div className='flex justify-between bg-blue-700 w-full h-14 items-center'>
+    <div className='h-screen w-full grid justify-center items-center flex-col'>
+      <div className='flex justify-between bg-blue-700 w-full h-full items-center'>
         <div className='mx-6 py-2 '>
           <h3 className='text-white text-base font-medium md:text-lg'>Cards</h3>
         </div>

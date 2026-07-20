@@ -32,7 +32,7 @@ export const deleteTasks = async (req,res) =>{
         const {id} = req.params
         const deletedTask = await Task.findByIdAndDelete(id)
         if (!deletedTask) {
-            return res.status(200).json({message:"we can't find the task"})
+            return res.status(404).json({message:"we can't find the task"})
         }
         
         res.status(200).json({tasks:deletedTask})

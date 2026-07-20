@@ -7,8 +7,8 @@ const router = express.Router()
 // router.route('/create').post(createTasks)
 router.get('/get', getTasks)
 router.post('/create', createTasks)
-router.put('/update', updateTasks)
-router.delete('/delete', deleteTasks)
+router.put('/update/:id', updateTasks)
+router.delete('/delete/:id', deleteTasks)
 
 //url http://localhost:2023/api/v1/users/get
 export default router
