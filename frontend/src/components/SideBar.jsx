@@ -2,7 +2,7 @@ import React from 'react'
 
 const SideBar = () => {
   return (
-    <div className="hidden md:flex bg-lime-400 h-full flex-col w-full gap-4 p-4">
+    <div className="flex bg-lime-400 h-full flex-col w-full gap-4 p-4">
       <h2 className="text-2xl font-medium uppercase text-center text-white rounded">
         Category
       </h2>

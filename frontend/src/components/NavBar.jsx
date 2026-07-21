@@ -7,7 +7,7 @@ const NavBar = () => {
 
 
     return (
-        <div className='bg-blue-300 flex justify-between p-4 align-center'>
+        <div className='bg-blue-300 h-dhv flex justify-between p-4 align-center'>
             <div>
                 <Link to='/'>
                     <h1 className='text-3xl text-red-400 font-bold' >TASKBAR</h1>

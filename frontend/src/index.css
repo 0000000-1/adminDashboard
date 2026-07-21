@@ -1,1 +1,5 @@
 @import "tailwindcss";
+
+@theme {
+  --breakpoint-xs: 34.375rem; /* Adds the 550px breakpoint cleanly */
+}
