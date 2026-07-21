@@ -46,12 +46,12 @@ try {
     const {id} = req.params
     const {title, priority, isCompleted} = req.body
 
-    const UpdatedUser = await Task.updateOne({
+    const UpdatedUser = await Task.findByIdAndUpdate(id,{
         title, priority, isCompleted
     })
     
     if(!UpdatedUser){
-       return res.status(200).json({message:"we can't update the task"})
+       return res.status(404).json({message:"we can't update the task"})
     }
         res.status(201).json(UpdatedUser);
         
