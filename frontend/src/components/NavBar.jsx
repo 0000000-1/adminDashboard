@@ -13,7 +13,7 @@ const NavBar = () => {
                     <h1 className='text-3xl text-red-400 font-bold' >TASKBAR</h1>
                 </Link>
             </div>
-            <div className='justify-center flex align-center '>
+            <div className='hidden md:flex justify-center align-center '>
                 <search className='w-fit h-full text-base font-medium md:text-lg'>
                     <form className='bg-amber-100 p-2 rounded-2xl flex items-center gap-6 px-6 text-sm' >
                         {/* // action='/search-results' method='get'  for='task-search'*/}

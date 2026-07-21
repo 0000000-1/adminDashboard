@@ -29,17 +29,23 @@ const TaskCard = () => {
       await axios.delete(`/api/v1/users/delete/${id}`)
       console.log('sucessfully deleted by client side')
       // // FIXED: Filter out the deleted task from state to update the UI instantly
-      // setTaskNote((prevTasks) => prevTasks.filter(task => task._id !== id));
-      // console.log('Successfully deleted by client side');
+      // setTaskNote()
+      console.log('Successfully deleted by client side');
 
     } catch (error) {
       console.log('error on deleting task from client side')
     }
   }
 
-  const handleUpdate = async () => {
-    console.log('update handle');
-
+  const handleUpdate = async (id) => {
+    try {
+      await axios.put(`/api/v1/users/update/${id}`)
+      
+      console.log('updated handle');
+    } catch (error) {
+        console.log('error on updating task from client side')
+    
+    }
   }
 
   return (
@@ -49,7 +55,7 @@ const TaskCard = () => {
           There is no task, create one for me bro
         </span>
       ) : (
-        <div className="grid grid-cols-4 gap-3 p-4">
+        <div className="grid grid-col-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 p-4">
           {taskNote.map((task) => (
             <div
               key={task._id || task.id}
@@ -61,7 +67,7 @@ const TaskCard = () => {
                 <input type="checkbox" name="" id="" />
                 <div className='flex gap-3'>
                   <button onClick={() => {handleUpdate (task._id)}} className='text-white text-base font-medium md:text-lg'>upd</button>
-                  <button onClick={() => {handleDelete (task._id)}}  className='text-white text-base font-medium md:text-lg'>del</button>
+                  <button onClick={() => {handleDelete (task._id)}} className='text-white text-base font-medium md:text-lg'>del</button>
                 </div>
               </div>
             </div>
